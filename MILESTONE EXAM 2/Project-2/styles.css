@@ -1,0 +1,114 @@
+body{
+    
+    background-color: #ffffff;
+    height: 100vh;
+    background: linear-gradient(#210355,#0f0b0b);
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* align-content: space-around; */
+    width: 100%;
+}
+
+a{
+    display: none;
+    text-decoration: none;
+    margin-left: 90vw;
+    font-size:25px;
+    color: #ff3939;
+    padding: 0px 7px 0px 7px;
+    font-weight: 900;
+    border: 2px solid rgb(255, 253, 253);
+    border-radius: 50%;
+    margin-top: -5vh;
+}
+
+a:hover{
+    color: #ffffff;
+    background-color: #ff2d2d;
+}
+
+.container {
+    text-align: center;
+    margin-top: 10vh;
+    
+  }
+  
+  h2 {
+    color: #e12684;
+    padding: 8px;
+    border: solid #ffffff 2px ;
+    border-radius: 25%;
+  }
+  
+  input[type="text"] {
+    width: 300px;
+    padding: 5px;
+    margin-top: 10px;
+  }
+  
+  button {
+    padding: 6px 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: black;
+    border: none;
+    
+  }
+
+  button:hover{
+    border:  solid 1px rgb(134, 134, 255);
+    padding: 7px 10px;
+  }
+
+  
+  .movie-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /*Adjust the number of columns as needed*/
+    grid-gap: 10px;  /* Adjust the gap between cards as needed */
+    
+  }
+  
+#movieDetails{
+    background-color:#000000;
+    margin-top: 50px;
+}
+
+  .movie {
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    /* height: 20vh; */
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+  }
+  
+  .movie h2 {
+    margin-top: 2px;
+  }
+  
+  .movie img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .movie p {
+    margin-top: 1px;
+  }
+
+ /* Media query for smaller screens */
+@media screen and (max-width: 408px) {
+    .movie-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 2fr); /*Adjust the number of columns as needed*/
+        grid-gap: 6px;  /* Adjust the gap between cards as needed */
+        
+      }
+      
+  }

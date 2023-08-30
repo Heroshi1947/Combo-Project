@@ -1,0 +1,40 @@
+<!-- blog.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Blog</title>
+  <link rel="stylesheet" type="text/css" href="/public/blogStyles.css">
+</head>
+<body>
+  <header>
+    <a class="title" href="/public/index.html"><h1>PS-Blogs</h1></a>
+    <div id="closeBlog"><a href="/public/index.html">x</a></div>
+  </header>
+
+  
+    <div id="blogPost">
+      <div class="card">
+      <h2 id="blogTitle"></h2>
+      <img id="blogPoster" alt="poster.jpg"  loading="lazy">
+      <p id="blogDescription"></p>
+      <p id="blogContent"></p>
+      </div>
+    </div>
+  
+  
+  <script src="/public/script.js"></script>
+  <script>
+    // Retrieve the blog data from sessionStorage
+    const currentBlog = JSON.parse(localStorage.getItem('currentBlog'));
+
+    // Update the blog post content
+    if (currentBlog) {
+      document.getElementById('blogTitle').textContent = currentBlog.title;
+      document.getElementById('blogPoster').src = currentBlog.poster;
+      document.getElementById('blogPoster').alt = currentBlog.title;
+      document.getElementById('blogDescription').textContent = currentBlog.description;
+      document.getElementById('blogContent').textContent = currentBlog.content;
+    }
+  </script>
+</body>
+</html>
